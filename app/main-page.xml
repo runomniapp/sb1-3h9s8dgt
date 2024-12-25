@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ScrollView>
+        <StackLayout class="container">
+            <Label text="Rastgele Sayı Üreteci" class="title" />
+            
+            <Label text="Minimum Sayı" class="label" />
+            <TextField 
+                hint="Minimum sayıyı girin" 
+                keyboardType="number" 
+                text="{{ minNumber }}"
+                class="input" />
+            
+            <Label text="Maksimum Sayı" class="label" />
+            <TextField 
+                hint="Maksimum sayıyı girin" 
+                keyboardType="number" 
+                text="{{ maxNumber }}"
+                class="input" />
+            
+            <Button 
+                text="Rastgele Sayı Üret" 
+                tap="{{ generateRandomNumber }}"
+                class="button" />
+            
+            <StackLayout class="result-container" visibility="{{ hasResult ? 'visible' : 'collapsed' }}">
+                <Label text="Sonuç:" class="result-label" />
+                <Label text="{{ result }}" class="result-number" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>
